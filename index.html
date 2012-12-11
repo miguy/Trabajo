@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Centro de Formacion Gauss</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="cleartype" content="on">
+
+    <!-- Lungo - Stylesheets -->
+    <link rel="stylesheet" href="components/lungo/lungo.css">
+    <link rel="stylesheet" href="components/lungo/lungo.icon.css">
+    <link rel="stylesheet" href="components/lungo/lungo.icon.brand.css">
+    <link rel="stylesheet" href="components/lungo/lungo.theme.default.css">
+    <script src="components/lungo/overthrow.js"></script>
+</head>
+
+<body class="app">
+
+
+    <section id="main" data-transition="slide">
+        <header  class="">
+            <div class="centered title with-subtitle">
+                Ejemplo con canvas
+                <small class="subtitle">Drag and Drop</small>
+            </div>
+        </header>
+
+        <article id="main-article" class="list indented">
+            <canvas width="400" height="400"></canvas>
+        </article>
+    </section>
+
+
+    <!-- Lungo - Dependencies -->
+    <script src="components/lungo/quo.js"></script>
+    <script src="components/lungo/lungo.js"></script>
+    <script src="components/jquery-1.8.3.min.js"></script>
+    <script src="components/jcanvas.min.js"></script>
+    
+    <!-- Lungo - Sandbox App -->
+    <script>
+        Lungo.init({
+            name: 'cfgauss'
+        });
+        $(function(){
+            $("canvas")
+                .drawArc({
+                  layer: true,
+                  fillStyle: "#36b",
+                  strokeStyle: '#36b',
+                  strokeWidth: 2,
+                  x: 150, y: 150,
+                  radius: 50,
+                  ccw: true,
+                  draggable: true
+                })
+                .drawRect({
+                  layer: true,
+                  fillStyle: "#6c1",
+                  strokeStyle: '#6c1',
+                  strokeWidth: 2,
+                  x: 100, y: 100,
+                  width: 100, height: 100,
+                  draggable: true
+            });
+        });
+    </script>
+</body>
+</html>
