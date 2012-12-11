@@ -18,12 +18,19 @@
     <link rel="stylesheet" href="components/lungo/lungo.icon.brand.css">
     <link rel="stylesheet" href="components/lungo/lungo.theme.default.css">
     <script src="components/lungo/overthrow.js"></script>
+    <style>
+        #widget{
+            width: 100px;
+            height: 100px;
+            background: #000;
+            }
+    </style>
 </head>
 
 <body class="app">
 
 
-    <section id="main" data-transition="slide">
+    <section id="main">
         <header  class="">
             <div class="centered title with-subtitle">
                 Ejemplo con canvas
@@ -32,7 +39,7 @@
         </header>
 
         <article id="main-article" class="list indented">
-            <canvas width="400" height="400"></canvas>
+            <div id="widget"></div>
         </article>
     </section>
 
@@ -40,8 +47,9 @@
     <!-- Lungo - Dependencies -->
     <script src="components/lungo/quo.js"></script>
     <script src="components/lungo/lungo.js"></script>
-    <script src="components/jquery-1.8.3.min.js"></script>
-    <script src="components/jcanvas.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.8.21/jquery-ui.min.js"></script>
+    <script src="jquery.ui.touch-punch.min.js"></script>
     
     <!-- Lungo - Sandbox App -->
     <script>
@@ -49,26 +57,7 @@
             name: 'cfgauss'
         });
         $(function(){
-            $("canvas")
-                .drawArc({
-                  layer: true,
-                  fillStyle: "#36b",
-                  strokeStyle: '#36b',
-                  strokeWidth: 2,
-                  x: 150, y: 150,
-                  radius: 50,
-                  ccw: true,
-                  draggable: true
-                })
-                .drawRect({
-                  layer: true,
-                  fillStyle: "#6c1",
-                  strokeStyle: '#6c1',
-                  strokeWidth: 2,
-                  x: 100, y: 100,
-                  width: 100, height: 100,
-                  draggable: true
-            });
+            $('#widget').draggable();
         });
     </script>
 </body>
